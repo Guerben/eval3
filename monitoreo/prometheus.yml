@@ -1,0 +1,8 @@
+global:
+  
+  scrape_Interval: 5s
+
+scrape_Configs:
+ - job_name: 'cadvisor'
+   static_Configs:
+    - targets: ['cadvisor:8080']
