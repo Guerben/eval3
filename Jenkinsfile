@@ -30,7 +30,7 @@ pipeline {
 
                 echo 'Escaneo dinamico automatizado con OWASP ZAP...'
                 
-                sh "docker run --rm --net ${NETWORK_NAME} -v \$(pwd):/zap/wrk/:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://tmp-zap-test:5000 -g gen.conf -r zap_report.html || true"
+                sh "docker run --rm --net ${NETWORK_NAME}  \$(pwd):/zap/wrk/:rw ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t http://tmp-zap-test:5000 -g gen.conf -r zap_report.html || true"
             }
         }
 
