@@ -12,4 +12,4 @@ COPY app/ ./app/
 USER devsecops
 EXPOSE 5000
 
-CMD["python", "app/app.py"]
+CMD ["python", "app/app.py"]
